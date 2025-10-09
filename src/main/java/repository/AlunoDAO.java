@@ -3,13 +3,12 @@ package repository;
 import Conexao.Conexao;
 import model.Aluno;
 
-import java.net.ConnectException;
 import java.sql.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class alunoDAO {
+public class AlunoDAO {
 
         public Aluno inserirAluno (Aluno aluno) throws SQLException{
              String sql = "INSERT INTO aluno(nome,email,matricula,data_nascimento) VALUES(?,?,?,?)";
@@ -53,7 +52,7 @@ public class alunoDAO {
                     String nome = rt.getString("nome");
                     String email = rt.getString("email");
                     String matricula = rt.getString("matricula");
-                    Date data_nascimento = rt.getDate("data_nascimento");
+                    LocalDate data_nascimento = rt.getDate("data_nascimento").toLocalDate();
 
 
                     var aluno = new Aluno(id,nome,email,matricula,data_nascimento);

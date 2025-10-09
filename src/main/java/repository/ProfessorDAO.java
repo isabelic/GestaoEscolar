@@ -2,14 +2,12 @@ package repository;
 
 import Conexao.Conexao;
 import model.Professor;
-import org.springframework.boot.context.event.SpringApplicationEvent;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class professorDAO {
+public class ProfessorDAO {
 
     public Professor inserirProf(Professor prof) throws SQLException{
         String sql = "INSERT INTO professor(nome,email,disciplina) VALUES(?,?,?)";

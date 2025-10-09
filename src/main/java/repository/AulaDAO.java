@@ -3,13 +3,12 @@ package repository;
 import Conexao.Conexao;
 import model.Aula;
 
-import java.io.PipedReader;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class aulaDAO {
+public class AulaDAO {
 
     public Aula inserirAula(Aula aula) throws SQLException{
         String sql = "INSERT INTO aula(turma_id, data_hora, assunto) VALUES(?,?,?)";

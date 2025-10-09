@@ -19,6 +19,11 @@ public class Aula {
         this.data_hora = data_hora;
         this.assunto = assunto;
     }
+    public Aula(int id,String assunto, LocalDateTime data_hora ) {
+        this.id = id;
+        this.assunto = assunto;
+         this.data_hora = data_hora;
+    }
 
     public Aula( int turma_id, LocalDateTime data_hora, String assunto) {
         this.turma_id = turma_id;

@@ -2,26 +2,28 @@ package model;
 
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class Aluno {
     int id;
     String nome;
     String email;
     String matricula;
-    Date data_nascimento;
+    LocalDate dataNascimento;
 
-    public Aluno(int id, String nome, String email, String matricula, Date data_nascimento) {
+
+    public Aluno(int id, String nome, String email, String matricula, LocalDate dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.matricula = matricula;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
     }
-    public Aluno(String nome, String email, String matricula, Date data_nascimento) {
+    public Aluno(String nome, String email, String matricula, LocalDate dataNascimento) {
         this.nome = nome;
         this.email = email;
         this.matricula = matricula;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
     }
 
     public Aluno(int id,String nome, String email, String matricula) {
@@ -64,11 +66,11 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public Date  getData_nascimento() {
-        return  data_nascimento;
+    public LocalDate  getDataNascimento() {
+        return  dataNascimento;
     }
 
-    public void setData_nascimento(Date data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setData_nascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }
