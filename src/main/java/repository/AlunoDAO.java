@@ -21,7 +21,7 @@ public class AlunoDAO {
                  st.setString(1,aluno.getNome());
                  st.setString(2, aluno.getEmail());
                  st.setString(3,aluno.getMatricula());
-                 st.setDate(4,aluno.getData_nascimento());
+                 st.setObject(4,aluno.getDataNascimento());
                  st.executeUpdate();
 
 
@@ -108,7 +108,7 @@ public class AlunoDAO {
 
 
 
-        public void atualizarAlunos(Aluno aluno) throws  SQLException{
+        public void atualizarAlunos(int id, Aluno aluno) throws  SQLException{
             String sql = "UPDATE aluno SET nome =? , email = ?,  matricula =? ,  data_nascimento = ? WHERE id = ? ";
 
 
@@ -118,7 +118,7 @@ public class AlunoDAO {
                 st.setString(1, aluno.getNome());
                 st.setString(2, aluno.getEmail());
                 st.setString(3, aluno.getMatricula());
-                st.setDate(4,aluno.getData_nascimento());
+                st.setObject(4,aluno.getDataNascimento());
                 st.setInt(5, aluno.getId());
                 st.executeUpdate();
             }

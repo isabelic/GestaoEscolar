@@ -23,6 +23,10 @@ public class Nota {
         this.valor = valor;
     }
 
+    public Nota(int id, Double valor) {
+        this.id = id;
+        this.valor = valor;
+    }
 
     public int getId() {
         return id;

@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public record CriarNotaRespostaDto(
         int id,
-        int alunoNome,
-        int alunoAssunto,
+        String  alunoNome,
+        String  alunoAssunto,
         double valor
 
 ) {
