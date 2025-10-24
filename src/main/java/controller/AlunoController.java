@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import service.AlunoService;
-
 import java.util.List;
 
 @RestController
@@ -20,8 +19,7 @@ public class AlunoController {
      public ResponseEntity<String> testarValidacao(@Valid @ResponseBody CriarAlunoRequisicaoDto requisicaoDto){
          return  ResponseEntity.status(HttpStatus.OK).body("Ola mundo");
      }*/
-
-  private AlunoService service;
+private AlunoService service;
 
      public AlunoController(AlunoService service){
       this.service = service;
